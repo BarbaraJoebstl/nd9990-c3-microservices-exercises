@@ -1,4 +1,4 @@
-version: "1"
+version: "3.3"
 services:
   reverseproxy:
       image: bjoebstl/reverseproxy
@@ -39,4 +39,4 @@ services:
   frontend:
         image: bjoebstl/udagram-frontend:local
         ports:
-        - "8100:
+          - 8100:8100

@@ -72,3 +72,13 @@ Create an AWS S3 bucket. Set the config values for environment variables prefixe
     npm audit fix
     ```
 5. In `set_env.sh`, environment variables are set with `export $VAR=value`. Setting it this way is not permanent; every time you open a new terminal, you will have to run `set_env.sh` to reconfigure your environment variables. To verify if your environment variable is set, you can check the variable with a command like `echo $POSTGRES_USERNAME`.
+
+
+### Deploy locally
+all deployment files can be found in /udagram-deployment/docker
+Build the images: `docker-compose -f docker-compose-build.yaml build --parallel`
+Push the images: `docker-compose -f docker-compose-build.yaml push`
+Run the container: `docker-compose up`.
+The application will run on localhost:8100
+
+### Run on AWS
